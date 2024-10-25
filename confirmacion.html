@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Asistencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff; /* Color de fondo blanco */
+        }
+
+        .images-section {
+            display: flex; /* Usar flexbox para alinear imágenes */
+            justify-content: center; /* Centrar imágenes horizontalmente */
+            margin-bottom: 30px; /* Espacio inferior */
+        }
+
+        .image-container {
+            margin: 0 15px; /* Espacio entre imágenes */
+        }
+
+        .image-container img {
+            width: 150px; /* Ancho de las imágenes */
+            height: 150px; /* Alto de las imágenes */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        .form-section {
+            max-width: 600px; /* Ancho máximo del formulario */
+            margin: 0 auto; /* Centrar el formulario */
+            background-color: #F2B0C6; /* Fondo rosa */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        h2 {
+            text-align: center; /* Centrar el título */
+            margin-bottom: 20px; /* Espacio inferior */
+        }
+
+        label {
+            display: block; /* Bloquear etiquetas para alineación */
+            margin-bottom: 5px; /* Espacio inferior */
+            font-weight: bold; /* Negrita */
+        }
+
+        input[type="text"],
+        select {
+            width: 100%; /* Ancho completo */
+            padding: 10px; /* Espaciado interno */
+            margin-bottom: 20px; /* Espacio inferior */
+            border-radius: 5px; /* Bordes redondeados */
+            border: 1px solid #ccc; /* Borde */
+            box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+        }
+
+        input[type="submit"] {
+            background-color: #2969B0; /* Color de fondo azul */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            padding: 10px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño del texto */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #235a8f; /* Color más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <h2>Confirmación de Asistencia</h2>
+
+    <!-- Apartado de imágenes -->
+    <div class="images-section">
+        <div class="image-container">
+            <img src="cuadrada1.png" alt="Imagen 1">
+        </div>
+        <div class="image-container">
+            <img src="cuadrada2.png" alt="Imagen 2">
+        </div>
+        <div class="image-container">
+            <img src="cuadrada3.png" alt="Imagen 3">
+        </div>
+        <div class="image-container">
+            <img src="cuadrada4.png" alt="Imagen 4">
+        </div>
+    </div>
+    
+<!-- Formulario -->
+    <div class="form-section">
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="acompañantes">¿Asistirás acompañado?</label>
+            <select id="acompañantes" name="acompañantes">
+                <option value="0">Nadie</option>
+                <option value="1">1 Acompañante</option>
+                <option value="2">2 Acompañantes</option>
+                <option value="2">Mis hijos (aplica para menores de 15 años)</option>
+            </select>
+
+            <input type="submit" value="Confirmar Asistencia" onclick="enviarFormulario()">
+        </form>
+    </div>
+
+    
+
+    <script>
+        const webhookURL = "https://script.google.com/macros/s/AKfycbwv9S3G9kpbq9pvl44YbylkO0zUYmpJJ0E9NxEvVm3hx8BubbHsVrjP7GQzT_Idm_WV/exec"; // Reemplaza con tu URL
+
+        function enviarFormulario() {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const acompanantes = document.getElementById("acompanantes").value;
+
+            fetch(webhookURL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    nombre: nombre,
+                    apellido: apellido,
+                    acompanantes: acompanantes,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    alert("¡Gracias por confirmar tu asistencia!");
+                    document.getElementById("confirmacionForm").reset();
+                } else {
+                    alert("Hubo un error al enviar la confirmación.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Hubo un problema al enviar la confirmación.");
+            });
+        }
+
+    </script>
+
+</body>
+</html>

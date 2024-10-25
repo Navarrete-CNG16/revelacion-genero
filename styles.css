@@ -1,0 +1,351 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+}
+
+/* Banner principal */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-img.active {
+  opacity: 1;
+}
+
+/* Contenido dividido */
+.content {
+  display: flex;
+  width: 80%;
+  margin-top: 50px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Lado izquierdo más grande */
+.text {
+  width: 70%;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pink {
+  color: #F2B0C6;
+}
+
+.blue {
+  color: #2969B0;
+}
+.yellow {
+  color: #EDA540;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.description {
+  font-size: 20px;
+  text-align: justify;
+  color: #555;
+}
+
+/* Lado derecho */
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #F2B0C6;
+  color: white;
+  border: 2px solid #2969B0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e099af;
+}
+
+/* Títulos de información */
+.info-title {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Texto de ubicación y fecha */
+.info-text {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Sección de imágenes cuadradas */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 25px; /* Espacio entre imágenes */
+}
+
+.gallery-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px; /* Esquinas redondeadas (opcional) */
+}
+
+
+/* Apartado de video */
+.video-section {
+  display: flex;
+  width: 80%;
+  margin-top: 100px;
+  gap: 20px; /* Espacio entre lado izquierdo y derecho */
+}
+
+/* Lado izquierdo del video */
+.video-text {
+  width: 50%; /* Ajustar el ancho según sea necesario */
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.video-title {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.video-description {
+  font-size: 20px;
+  text-align: justify;
+  color: #555;
+}
+
+/* Lado derecho del video */
+.video-container {
+  width: 50%; /* Ajustar el ancho según sea necesario */
+}
+
+/* Apartado de vestimenta */
+.dress-code {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.dress-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.dress-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Opciones de vestimenta */
+.dress-options {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Espacio de 50px entre las imágenes */
+}
+
+.dress-option {
+   text-align: center; /* Centra el contenido de cada opción */
+  flex: 0 1 auto; /* Permite que los elementos se ajusten a su contenido */
+}
+
+.team-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.dress-image {
+  width: 300px; /* Ancho de las imágenes */
+  height: 300px; /* Alto de las imágenes */
+  margin: 0 0 25px 0; /* Espacio inferior entre imágenes */
+}
+
+.outfit {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.gift {
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* Apartado de ubicación */
+.location-section {
+  display: flex;
+  justify-content: space-between; /* Espacio entre el título y el mapa */
+  margin-top: 100px; /* Espacio superior */
+  padding: 20px; /* Espacio interno */
+}
+
+.location-left {
+  flex: 1; /* Ocupa una parte del espacio */
+  margin-right: 20px; /* Espacio a la derecha */
+}
+
+.location-title {
+  font-size: 30px; /* Tamaño del título */
+  font-family: 'Montserrat Alternates', sans-serif; /* Fuente */
+}
+
+.location-subtitle {
+  font-size: 18px; /* Tamaño del subtítulo */
+  line-height: 1.5; /* Espaciado entre líneas */
+  color: #000000; /* Color del texto */
+}
+
+.location-right {
+  flex: 1; /* Ocupa una parte del espacio */
+}
+
+.location-right iframe {
+  border-radius: 10px; /* Esquinas redondeadas del mapa */
+}
+
+
+
+/* Apartado rosa */
+.free-section {
+  width: 100%; /* Ancho completo */
+  height: 350px; /* Altura especificada */
+  background-color: #F2B0C6; /* Color de fondo rosa */
+  color: #F2B0C6; /* Color de texto rosa */
+  display: flex; /* Usar flexbox para centrar */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: center; /* Alinear elementos en el centro horizontalmente */
+  justify-content: center; /* Alinear elementos en el centro verticalmente */
+  text-align: center; /* Centrar texto */
+  margin-top: 30px; /* Espacio superior */
+}
+
+.free-title {
+  font-size: 40px; /* Tamaño del título */
+  font-family: 'Montserrat Alternatives', sans-serif; /* Fuente */
+   margin-bottom: 25px; /* Espacio debajo del título */
+}
+
+.free-subtitle {
+  font-size: 20px; /* Tamaño del subtítulo */
+   margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+
+.free-button {
+  background-color: white; /* Fondo blanco */
+  color: #2969B0; /* Letras en azul */
+  border: 2px solid #2969B0; /* Contorno azul */
+  padding: 10px 20px; /* Espaciado del botón */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.free-button:hover {
+  background-color: #2969B0; /* Cambia el fondo al pasar el mouse */
+  color: white; /* Cambia el texto a blanco */
+}
+
+/* Apartado de horas faltantes */
+.countdown-section {
+  text-align: center; /* Centrar el texto */
+  margin-top: 50px; /* Espacio superior */
+}
+
+.countdown-title {
+  font-size: 28px; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+}
+
+.countdown-timer {
+  display: flex; /* Usar flexbox para alinear los elementos */
+  justify-content: center; /* Centrarlos horizontalmente */
+  margin-top: 10px; /* Espacio encima del contador */
+}
+
+.time-unit {
+  margin: 0 50px; /* Espacio entre cada unidad */
+}
+
+.time-value {
+  font-size: 80px; /* Tamaño grande para el contador */
+  font-weight: bold; /* Negrita */
+  color: #2969B0; /* Color azul */
+}
+
+.time-label {
+  font-size: 15px; /* Tamaño de las etiquetas */
+  color: #F2B0C6; /* Color rosa */
+  display: block; /* Para que cada etiqueta esté en su propia línea */
+}
+
+
+/* Apartado Bebé en Camino */
+.baby-on-the-way {
+  width: 100%; /* Ancho completo */
+  height: 150px; /* Altura del apartado */
+  background-color: #F2B0C6; /* Fondo rosa */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 50px; /* Espacio superior */
+}
+
+.baby-title {
+  font-size: 36px; /* Tamaño del texto */
+  color: #2969B0; /* Color azul */
+  font-weight: bold; /* Negrita */
+  text-align: center; /* Centrar el texto */
+}
