@@ -162,7 +162,7 @@ button:hover {
 .image-gallery {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 60px;
   gap: 15px; /* Espacio entre imágenes */
   flex-wrap: wrap; /* Permitir que las imágenes se ajusten en filas */
 }
@@ -197,7 +197,7 @@ button:hover {
 .video-section {
   display: flex;
   width: 80%;
-  margin-top: 50px;
+  margin-top: 80px;
   gap: 20px; /* Espacio entre lado izquierdo y derecho */
 
 }
@@ -329,6 +329,9 @@ button:hover {
   .dress-description {
     font-size: 0.75rem; /* Ajusta aún más el tamaño de la fuente */
   }
+  .dress-image {
+    height: 35vh; /* Reducir altura para pantallas pequeñas */
+    }
 }
 
 /*****************************************************************************/
