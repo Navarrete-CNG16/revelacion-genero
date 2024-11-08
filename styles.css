@@ -167,14 +167,9 @@ button:hover {
   }
 }
 
-/* Media Query para pantallas móviles */
 @media (max-width: 480px) {
   .gallery-img {
     max-width: 100%; /* Una imagen por fila en pantallas muy pequeñas */
-  }
-  .image-gallery {
-    gap: 8px; /* Menor espacio en dispositivos móviles */
-    height: 35vh; /* Reducir altura para pantallas pequeñas */
   }
 }
 
