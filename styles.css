@@ -184,7 +184,7 @@ button:hover {
 
 @media (max-width: 480px) {
   .gallery-img {
-    max-width: 100%; /* Una imagen por fila en pantallas muy pequeñas */
+    max-width: 45%; /* Una imagen por fila en pantallas muy pequeñas */
   }
 }
 
