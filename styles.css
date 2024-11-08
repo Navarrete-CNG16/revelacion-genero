@@ -186,6 +186,9 @@ button:hover {
   .gallery-img {
     max-width: 45%; /* Una imagen por fila en pantallas muy pequeñas */
   }
+  .image-gallery {
+    height: 35vh; /* Reducir altura para pantallas pequeñas */
+  }
 }
 
 /*****************************************************************************/
