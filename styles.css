@@ -270,6 +270,7 @@ button:hover {
   color: #555;
   line-height: 1.5;
   margin-bottom: 2rem; /* Usa rem para el margen inferior */
+  border-radius: 10px;
 }
 
 /* Opciones de vestimenta */
