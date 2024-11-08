@@ -141,6 +141,21 @@ button:hover {
   color: #555;
   line-height: 1.5;
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px; /* Tamaño ajustado para pantallas de celulares */
+  }
+  .subtitle {
+    font-size: 20px; /* Tamaño ajustado para celulares */
+  }
+  .description {
+    font-size: 16px; /* Tamaño ajustado para celulares */
+  }
+}
+
+
+
 /*****************************************************************************/
 
                               /* Sección de imágenes cuadradas */
