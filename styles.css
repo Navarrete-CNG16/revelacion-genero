@@ -270,7 +270,6 @@ button:hover {
   color: #555;
   line-height: 1.5;
   margin-bottom: 2rem; /* Usa rem para el margen inferior */
-  border-radius: 10px;
 }
 
 /* Opciones de vestimenta */
@@ -295,6 +294,7 @@ button:hover {
   max-width: 300px; /* Establece un ancho máximo */
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 0 0 1rem 0; /* Usa rem para el margen inferior */
+  border-radius: 10px;
 }
 
 .outfit {
