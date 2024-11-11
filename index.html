@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revelación de género</title>
-  
-<audio autoplay muted controls >
-  <source src="teesperaba.mp3" type="audio/mpeg">
-  <source src="teesperaba.ovg" type="audio/ogg">
-</audio>
-
   <link rel="icon" href="bebesin.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="audioModal" class="modal">
+  <div class="modal-content">
+    <p>¡Haz clic para descubrir un mensaje especial!</p>
+    <button onclick="playAudio()">Descubrir</button>
+  </div>
+</div>
+
+<audio id="revealAudio" src="teesperaba.mp3"></audio>
+
+  
   <!-- Banner principal -->
   <div class="banner">
     <img src="banner1.png" alt="Imagen inicial" class="banner-img active">
