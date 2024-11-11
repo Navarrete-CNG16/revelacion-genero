@@ -18,3 +18,10 @@ window.onload = function () {
   // Cambia la imagen cada 5 segundos
   setInterval(changeImage, 5000);
 };
+
+
+
+function playAudio() {
+  document.getElementById("revealAudio").play();
+  document.getElementById("audioModal").style.display = "none";
+}
